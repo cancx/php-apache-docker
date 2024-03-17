@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./app:/var/www/html/
+      - /DATA/AppData/Website/app:/var/www/html/
     depends_on:
       - db
   db:
@@ -18,7 +18,7 @@ services:
       MYSQL_USER: myuser
       MYSQL_PASSWORD: mypassword
     volumes:
-      - ./mysql:/var/lib/mysql
+      - /DATA/AppData/Website/mysql:/var/lib/mysql
   adminer:
     image: adminer
     container_name: adminer
